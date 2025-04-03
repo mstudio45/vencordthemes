@@ -1,1 +1,33 @@
+/**
+ * @name FixInputPadding
+ * @description Fixes the stupid "... is typing" space in the chat div.
+ * @author mstudio45
+ * @version 1.0.1
+ * @website https://mstudio45.com/
+ * @source https://github.com/mstudio45/vencordthemes/blob/main/
+ * @updateUrl https://raw.githubusercontent.com/mstudio45/vencordthemes/refs/heads/main/FixInputPadding.theme.css
+*/
 
+/* Moves the text input down */
+[class^=channelTextArea] {
+	--custom-chat-input-margin-bottom: 9px;
+	border: 1px solid var(--app-border-frame);
+}
+
+[class^=channelTextArea]:has([class^=channelAttachmentArea]) {
+	--custom-chat-input-margin-bottom: 0px !important;
+}
+
+/* Puts the typing div on top of the text input instead of in the bottom of the text input to remove that stupid space */
+[class^=typing] {
+	bottom: 66px;	
+}
+
+/* Moves the chat up */
+ol[data-list-id="chat-messages"] {
+	margin-bottom: 10px;
+}
+
+[class^=messagesWrapper] {
+	padding-bottom: 24px;
+}
