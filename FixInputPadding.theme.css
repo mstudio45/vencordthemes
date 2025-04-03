@@ -14,6 +14,7 @@
 	border: 1px solid var(--app-border-frame);
 }
 
+/* Fixes text input height with attachments */
 [class^=channelTextArea]:has([class^=channelAttachmentArea]) {
 	--custom-chat-input-margin-bottom: 0px !important;
 }
