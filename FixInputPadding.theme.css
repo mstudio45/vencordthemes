@@ -2,7 +2,7 @@
  * @name FixInputPadding
  * @description Fixes the stupid "... is typing" space in the chat div.
  * @author mstudio45
- * @version 1.0.1
+ * @version 1.0.2
  * @website https://mstudio45.com/
  * @source https://github.com/mstudio45/vencordthemes/blob/main/
  * @updateUrl https://raw.githubusercontent.com/mstudio45/vencordthemes/refs/heads/main/FixInputPadding.theme.css
@@ -31,4 +31,9 @@ ol[data-list-id="chat-messages"] {
 
 [class^=messagesWrapper] {
 	padding-bottom: 24px;
+}
+
+/* moves the slowmode and typing bar up if reply bar is shown */
+[class^=chat]:has([class^=channelTextArea] [class^=replyBar]) [class^=chatContent] [class^=typing] {
+	margin-bottom: 34px;
 }
